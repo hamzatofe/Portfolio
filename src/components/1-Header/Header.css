@@ -47,12 +47,12 @@ header .menu {
 }
 /* Icon button */
 header .moon, header .menu {
-    display: flex;
-    align-items:center;
+     display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--color-header);
     height: 2rem;
     width: 2rem;
-    justify-content: center;
     text-align: center;
     border-radius: 50%;
     color: var(--color-icon);
