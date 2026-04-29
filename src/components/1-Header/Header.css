@@ -134,6 +134,6 @@ header .fixed ul.modal li:first-child {
     }
 
     header .menu {
-        display: block;
+        display: flex;
     }
 }
