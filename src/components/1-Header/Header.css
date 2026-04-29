@@ -43,11 +43,11 @@ header button {
 
 
 header .menu {
-    display: none ;
+    display: none;
 }
 /* Icon button */
-header .moon, header .menu {
-     display: flex;
+header .moon,
+header .menu {
     align-items: center;
     justify-content: center;
     background-color: var(--color-header);
