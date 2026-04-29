@@ -1,0 +1,43 @@
+footer.flex {
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+}
+
+footer.flex ul {
+    gap: 1rem;
+}
+
+footer.flex ul a {
+    color: var(--color-icon);
+    font-size: 0.8rem;
+}
+
+footer.flex ul a:hover {
+    color: var(--color-blue);
+    font-size: 0.9rem;
+}
+
+footer.flex p {
+    color: #444;
+}
+
+footer.flex p a {
+    color: #444;
+    transition: 0.2s;
+}
+footer.flex p a:hover {
+    color: var(--color-blue);
+}
+
+
+
+
+@media (max-width: 600px) {
+    footer.flex  {
+        flex-direction: column;
+        row-gap: 1rem;
+        line-height: 1.1rem;
+    }
+}
+

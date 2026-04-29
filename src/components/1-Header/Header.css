@@ -1,0 +1,137 @@
+
+
+/*================
+    header
+================*/
+
+header.flex {
+    justify-content: space-between;
+    padding: 0 2.4rem;
+    margin-top: 1rem;
+}
+
+header.flex nav {
+    background-color: var(--color-header);
+    padding: 0.7rem 2rem;
+    border-radius: 3rem ;
+    box-shadow: 2px 2px 10px var(--color-header);
+}
+
+header ul.flex {
+    gap: 16px;
+}
+
+ul a {
+    color: var(--color-light);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+ul a:hover {
+    color: var(--color-blue);
+    font-size: 1.1rem;
+    font-weight: 500;
+
+}
+
+
+header button {
+   font-size: 1.2rem;
+}
+
+
+
+header .menu {
+    display: none ;
+}
+/* Icon button */
+header .moon, header .menu {
+    background-color: var(--color-header);
+    height: 2rem;
+    width: 2rem;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    color: var(--color-icon);
+    border: 1px solid rgba(235, 184, 178, 0.26);
+    transition: 0.2s;
+}
+header .sun {
+    color: orange;
+}
+
+header .moon:hover, header .menu:hover {
+    color: var(--color-light);
+    border: 1px solid rgba(235, 184, 178, 40);
+}
+
+header .close {
+    font-size: 1.4rem;
+    color: var(--color-icon);
+    transition: 0.3s;
+}
+
+header .close:hover {
+    font-size: 1.5rem;
+    color: rgb(213, 56, 56);
+    rotate: 180deg;
+}
+
+/* ==================
+         Modal 
+   ==================
+*/
+header .fixed {
+    position: fixed;
+    inset: 0;
+    z-index: 11;
+    background-color: rgb(40, 40, 48, 0.91);
+    backdrop-filter: blur(3px);
+}
+
+@keyframes move {
+    0% {scale: 0;}
+    50% {scale: 1.2;}
+    100% {scale: 1;}
+}
+
+header .fixed ul.modal {
+    animation: move 0.8s ;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    background-color: var(--color-secondary);
+}
+
+header .fixed ul.modal li {
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.6rem 0;
+    
+}
+
+header .fixed ul.modal li:last-child {
+    border: none;
+}
+
+header .fixed ul.modal li:first-child {
+    margin-bottom: -1rem;
+    text-align: right;
+    border: none;
+    padding-top: 0.2rem ;
+    padding-bottom: 0;
+}
+   
+/* Media query (responsive) */
+@media (max-width:700px) {
+    header.flex nav {
+        display: none;
+    }
+
+    header .menu {
+        display: block;
+    }
+}

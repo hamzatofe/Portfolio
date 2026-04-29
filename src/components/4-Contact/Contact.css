@@ -1,0 +1,156 @@
+
+
+section.contact-us .icon {
+    color: var(--color-icon);
+    margin-right: 1rem;
+    font-size: 1.8rem;
+    padding-top: 3px;
+}
+
+section.contact-us .icon:hover {
+    color: var(--color-light);
+}
+
+section.contact-us .title {
+    font-size: 2.1rem;
+    color: var(--color-light);
+    margin-bottom: 1rem;
+}
+
+section.contact-us .sub-title {
+    color: var(--color-icon);
+    margin-bottom: 1.5rem;
+    line-height: 1.5rem;
+}
+
+section.contact-us label {
+    color: var(--color-icon);
+    margin-bottom: 1rem;
+    
+}
+
+section.contact-us #email,
+ section.contact-us #message {
+    all: unset;
+    background-color: rgba(63, 63, 70, 0.15);
+    border: 1px solid var(--color-border);
+    width: 15rem; 
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    padding: 4px 6px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+section.contact-us #email:focus, 
+section.contact-us #message:focus {
+    border: 1px solid var(--color-blue);
+}
+
+.light section.contact-us #email:focus, 
+.light section.contact-us #message:focus {
+    border: 1px solid #34323200;
+    box-shadow: inset 1px 1px 6px #373434;
+}
+
+section.contact-us #email:hover, 
+section.contact-us #message:hover {
+    border: 1px solid var(--color-blue);
+}
+
+.light section.contact-us #email:hover, 
+.light section.contact-us #message:hover {
+    border: 1px solid #34323200;
+    box-shadow: inset 1px 1px 6px #373434;
+}
+
+section.contact-us #message {
+    min-height: 9rem;
+    min-width: 8rem;
+    max-width: 20rem;
+    max-height: 10rem;
+    resize: both;
+}
+
+section.contact-us .submit {
+    color: var(--color-button);
+    background-color: var(--color-header);
+    scale: 0.9;
+    padding: 0.6rem 1.5rem;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1rem;
+    opacity: 0.5;
+    border-radius: 6px;
+    transition: 0.3s;
+    border: 1px solid var(--color-border);
+}
+
+section.contact-us .submit:hover {
+    scale: 1;
+    opacity: 1;
+}
+
+section.contact-us .submit:active {
+    scale: 0.8;
+}
+
+.flex .animation .emailAnimation {
+    height: 20rem;
+    width: 20rem;
+    margin-right: 5rem;
+}
+
+@media (max-width: 1100px) {
+    section.contact-us .emailAnimation {
+       display: none;
+   }
+}
+
+@media (max-width: 600px) {
+    .animation {
+        display: none;
+    }
+    .flex form {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+    form .flex {
+        flex-direction: column;
+        align-items: start;
+        
+    }
+
+    section.contact-us #email,
+ section.contact-us #message {
+    width: 100%;
+    padding: 0.3rem 0.3rem;
+    margin-left: 0;
+    margin-top: 1rem;
+ }
+
+ section.contact-us label {
+    margin-bottom: 0;
+    
+}
+
+ section.contact-us .submit {
+    width: 5rem;
+    align-self: center;
+ }
+
+ form p.flex {
+    flex-direction: row;
+    margin-top: 1rem;
+ }
+ form p.flex span {
+    transform: translateY(1.2rem);
+ }
+
+
+
+}
+
+
+

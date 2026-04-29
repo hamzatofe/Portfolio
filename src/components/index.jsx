@@ -1,0 +1,5 @@
+export { default as Header} from './1-Header/Header'
+export { default as Hero} from './2-Hero/Hero'
+export { default as Main} from './3-Main/Main'
+export { default as Contact} from './4-Contact/Contact'
+export { default as Footer} from './5-Footer/Footer'
