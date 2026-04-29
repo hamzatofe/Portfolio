@@ -49,7 +49,7 @@ const Hero = () => {
             repeatType: "loop",
           }}
           className='title'>
-          Software designer, founder, and amateur astronaut.
+          Computer engineer, software designer, founder.
         </motion.h1>
 
         <p className='sub-title'>
