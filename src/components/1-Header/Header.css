@@ -47,6 +47,8 @@ header .menu {
 }
 /* Icon button */
 header .moon, header .menu {
+    display: flex;
+    align-items:center;
     background-color: var(--color-header);
     height: 2rem;
     width: 2rem;
