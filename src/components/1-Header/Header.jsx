@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import './Header.css'
 import { IoMoonOutline } from 'react-icons/io5';
 import { IoMdMenu } from 'react-icons/io';
@@ -33,14 +34,12 @@ const closeMenu = () => setshowModal(false);
       <div /> 
       
       <nav>
-        <ul>
-          <ul className='flex'>
+        <ul className='flex'>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Articles</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Speaking</a></li>
             <li><a href="#contact">Contact</a></li>
-          </ul>
         </ul>
       </nav>
 
@@ -53,20 +52,22 @@ const closeMenu = () => setshowModal(false);
         {them === 'dark' ? (<IoMoonOutline />) : (<IoSunnyOutline className='sun' />)}
        </button>
 
-
-      {showModal && (
-              <div className=' fixed'>
-        
-              <ul className='modal '>
-                <li ><button className='close' onClick={closeMenu}><IoMdClose /></button></li>
-                <li><a href="#about" onClick={closeMenu}>About</a></li>
-                <li><a href="#projects" onClick={closeMenu}>Articles</a></li>
-                <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
-                <li><a href="#contact" onClick={closeMenu}>Speaking</a></li>
-                <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
-              </ul>
-            
-          </div>
+      {showModal && createPortal(
+         <div className='fixed' onClick={closeMenu}>
+           <ul className='modal' onClick={(event) => event.stopPropagation()}>
+             <li className='close-item'>
+               <button className='close' onClick={closeMenu} aria-label='Close menu'>
+                 <IoMdClose />
+               </button>
+             </li>
+             <li><a href="#about" onClick={closeMenu}>About</a></li>
+             <li><a href="#projects" onClick={closeMenu}>Articles</a></li>
+             <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
+             <li><a href="#contact" onClick={closeMenu}>Speaking</a></li>
+             <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+           </ul>
+         </div>,
+         document.body
       )}
 
     </header>

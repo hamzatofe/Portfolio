@@ -86,25 +86,23 @@ header .close:hover {
          Modal 
    ==================
 */
-header .fixed {
+@keyframes move {
+    from { opacity: 0; transform: translateY(-0.5rem); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fixed {
     position: fixed;
     inset: 0;
-    z-index: 11;
+    z-index: 1000;
     background-color: rgb(40, 40, 48, 0.91);
     backdrop-filter: blur(3px);
-    pointer-events: auto;
 }
 
-@keyframes move {
-    0% {scale: 0;}
-    50% {scale: 1.2;}
-    100% {scale: 1;}
-}
-
-header .fixed ul.modal {
+.fixed ul.modal {
     animation: move 0.8s ;
     position: relative;
-    z-index: 1;
+    z-index: 1001;
     width: 75%;
     margin-left: auto;
     margin-right: auto;
@@ -114,13 +112,13 @@ header .fixed ul.modal {
     background-color: var(--color-secondary);
 }
 
-header .fixed ul.modal li {
+.fixed ul.modal li {
     border-bottom: 1px solid var(--color-border);
     padding: 0.6rem 0;
     
 }
 
-header .fixed ul.modal li a {
+.fixed ul.modal li a {
     display: block;
     width: 100%;
     padding: 0.7rem 0;
@@ -131,17 +129,17 @@ header .fixed ul.modal li a {
     touch-action: manipulation;
 }
 
-header .fixed ul.modal li a:hover,
-header .fixed ul.modal li a:focus-visible {
+.fixed ul.modal li a:hover,
+.fixed ul.modal li a:focus-visible {
     color: var(--color-blue);
     transform: translateY(-2px);
 }
 
-header .fixed ul.modal li:last-child {
+.fixed ul.modal li:last-child {
     border: none;
 }
 
-header .fixed ul.modal li:first-child {
+.fixed ul.modal li.close-item {
     margin-bottom: -1rem;
     text-align: right;
     border: none;
@@ -161,4 +159,4 @@ header .fixed ul.modal li:first-child {
 }
 ul a { display: inline-block; transition: color 0.3s, transform 0.3s; }
 
-@keyframes headerDrop { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes headerDrop { from { opacity: 0; } to { opacity: 1; } }
