@@ -92,6 +92,7 @@ header .fixed {
     z-index: 11;
     background-color: rgb(40, 40, 48, 0.91);
     backdrop-filter: blur(3px);
+    pointer-events: auto;
 }
 
 @keyframes move {
@@ -102,6 +103,8 @@ header .fixed {
 
 header .fixed ul.modal {
     animation: move 0.8s ;
+    position: relative;
+    z-index: 1;
     width: 75%;
     margin-left: auto;
     margin-right: auto;
@@ -115,6 +118,23 @@ header .fixed ul.modal li {
     border-bottom: 1px solid var(--color-border);
     padding: 0.6rem 0;
     
+}
+
+header .fixed ul.modal li a {
+    display: block;
+    width: 100%;
+    padding: 0.7rem 0;
+    color: var(--color-light);
+    text-align: center;
+    cursor: pointer;
+    pointer-events: auto;
+    touch-action: manipulation;
+}
+
+header .fixed ul.modal li a:hover,
+header .fixed ul.modal li a:focus-visible {
+    color: var(--color-blue);
+    transform: translateY(-2px);
 }
 
 header .fixed ul.modal li:last-child {
