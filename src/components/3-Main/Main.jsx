@@ -76,7 +76,7 @@ const Main = () => {
         </button>
       </section>
 
-      <section className="right-section flex gap-8  ">
+      <section id="projects" className="right-section flex gap-8  ">
         <AnimatePresence>
           {arr.map((item) => {
             return (

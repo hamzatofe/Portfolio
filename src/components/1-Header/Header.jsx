@@ -24,6 +24,8 @@ useEffect(() => {
  
 }, [them])
 
+const closeMenu = () => setshowModal(false);
+
 
   return (
     <header className=' flex '>
@@ -33,11 +35,11 @@ useEffect(() => {
       <nav>
         <ul>
           <ul className='flex'>
-            <li><a href="1">About</a></li>
-            <li><a href="1">Articals</a></li>
-            <li><a href="1">Prjects</a></li>
-            <li><a href="1">Speaking</a></li>
-            <li><a href="1">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Articles</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Speaking</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </ul>
       </nav>
@@ -56,12 +58,12 @@ useEffect(() => {
               <div className=' fixed'>
         
               <ul className='modal '>
-                <li ><button className='close' onClick={() => { setshowModal(false) }}><IoMdClose /></button></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Articals</a></li>
-                <li><a href="">Prjects</a></li>
-                <li><a href="">Speaking</a></li>
-                <li><a href="">Contact</a></li>
+                <li ><button className='close' onClick={closeMenu}><IoMdClose /></button></li>
+                <li><a href="#about" onClick={closeMenu}>About</a></li>
+                <li><a href="#projects" onClick={closeMenu}>Articles</a></li>
+                <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
+                <li><a href="#contact" onClick={closeMenu}>Speaking</a></li>
+                <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
               </ul>
             
           </div>

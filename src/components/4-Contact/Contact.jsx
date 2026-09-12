@@ -43,7 +43,7 @@ const Contact = () => {
   }, [state.succeeded]);
 
   return (
-    <section className="contact-us">
+    <section id="contact" className="contact-us">
       <h1 className="title">
         <FaEnvelope className="icon" />
         Contact us
