@@ -7,14 +7,16 @@
 header.flex {
     justify-content: space-between;
     padding: 0 2.4rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    animation: headerDrop 0.7s ease both;
 }
 
 header.flex nav {
     background-color: var(--color-header);
     padding: 0.7rem 2rem;
     border-radius: 3rem ;
-    box-shadow: 2px 2px 10px var(--color-header);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 header ul.flex {
@@ -30,7 +32,7 @@ ul a {
 
 ul a:hover {
     color: var(--color-blue);
-    font-size: 1.1rem;
+    transform: translateY(-2px);
     font-weight: 500;
 
 }
@@ -137,3 +139,10 @@ header .fixed ul.modal li:first-child {
         display: flex;
     }
 }
+<<<<<<< HEAD
+=======
+
+ul a { display: inline-block; transition: color 0.3s, transform 0.3s; }
+
+@keyframes headerDrop { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
+>>>>>>> ea997b4 (Improve portfolio design and animations)

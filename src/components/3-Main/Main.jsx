@@ -9,6 +9,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Main = () => {
+  const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "") + "/";
   const [currentActive, setcurrentActive] = useState("all");
   const [arr, setArr] = useState(myProjects);
 
@@ -87,7 +88,7 @@ const Main = () => {
                 key={item.imgPath}
                 className="card"
               >
-                <img width={230} src={item.imgPath} alt="" />
+                <img width={230} src={`${baseUrl}${item.imgPath}`} alt="" />
                 <div style={{ width: "230px" }} className="box">
                   <h2 className="title">{item.title}</h2>
                   <p className="sub-title">
@@ -100,7 +101,10 @@ const Main = () => {
                       <FaLink className="icon" />
                       <FaGithub className="icon" />
                     </div>
-                    <a href="1" className="link flex">
+                    <a
+                      href={item.link || '#'}
+                      className="link flex"
+                    >
                       more <FaArrowRight style={{ marginTop: "2px" }} />
                     </a>
                   </div>

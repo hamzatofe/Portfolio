@@ -1,18 +1,17 @@
 :root {
-    --color-primary: #000;
-    --color-light: #fff;
-    --color-secondary: rgb(24, 24, 27);
-    --color-button: #fff;
-    --color-border: #3f3f4666;
-    --color-header: #27272a;
-    --color-blue: #5dbcfc;
-    --color-icon: #b0a9a9;
-    --color-card1: #ffffff0d;
-    --color-card2: #ffffff0d;
+    --color-primary: #071116;
+    --color-light: #eefaff;
+    --color-secondary: #0c1b22;
+    --color-button: #eefaff;
+    --color-border: rgba(137, 205, 218, 0.18);
+    --color-header: rgba(21, 48, 57, 0.78);
+    --color-blue: #70e1e8;
+    --color-icon: #91abb2;
+    --color-card1: rgba(29, 75, 82, 0.46);
+    --color-card2: rgba(9, 27, 34, 0.78);
 
-    --font-primary: sans-serif;
-
-    --container-padding: 4rem;
+    --font-primary: 'Trebuchet MS', 'Segoe UI', sans-serif;
+    --container-padding: clamp(1.2rem, 5vw, 4rem);
 
 
 }
@@ -29,37 +28,41 @@ html {
 }
 
 .light {
-    --color-primary: #f5f5f5;
-    --color-secondary: #fcfcfc;
-    --color-button: #000;
-    --color-border: rgba(202, 202, 202, 0.518);
-    --color-light: rgb(39, 39, 42);
-    --color-icon: rgb(82, 82, 91);
-    --color-header: rgba(222, 222, 222, 0.732);
-    --color-blue: rgb(0, 149, 246);
-    --color-card1: #ffffffb3;
-    --color-card2: #d1d1d7;;
+    --color-primary: #eaf7f5;
+    --color-secondary: #f8fffd;
+    --color-button: #10252c;
+    --color-border: rgba(16, 66, 75, 0.18);
+    --color-light: #10252c;
+    --color-icon: #55777d;
+    --color-header: rgba(208, 235, 232, 0.8);
+    --color-blue: #078e9e;
+    --color-card1: rgba(255, 255, 255, 0.9);
+    --color-card2: rgba(200, 235, 230, 0.72);
     
 }
 
 body {
     background-color: var(--color-primary);
+    background-image: linear-gradient(rgba(112, 225, 232, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(112, 225, 232, 0.035) 1px, transparent 1px);
+    background-size: 42px 42px;
     color: var(--color-light);
     font-family: var(--font-primary);
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .container {
-    border: 2px solid var(--color-border);
+    border: 1px solid var(--color-border);
     
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--color-secondary);
+    background: radial-gradient(circle at 86% 8%, rgba(112, 225, 232, 0.11), transparent 24rem), var(--color-secondary);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.18);
     padding: 0 var(--container-padding);
 }
 
 .divider {
     border-bottom: 1px solid var(--color-border) ;
-    margin: 3rem 0;
+    margin: 4.5rem 0;
 
     width: calc(100% + 2*var(--container-padding));
     margin-left: calc(var(--container-padding)*-1);
@@ -91,7 +94,7 @@ button {
 }
 
 button:active {
-    scale: 0.9;
+    transform: scale(0.94);
 }
 
 button:disabled {
@@ -133,12 +136,15 @@ button:disabled {
     bottom: 2rem;
     right: 2%;
     border: 1px solid #ffffff48;
-    transition: 3s;
+    transition: opacity 0.5s, transform 0.3s, background-color 0.3s;
+    box-shadow: 0 8px 24px rgba(112, 225, 232, 0.24);
 }
 
 .scroll:hover {
     color: #fff;
-  background-color: #1a80e6d9;
+    background-color: var(--color-light);
+    color: var(--color-primary);
+    transform: translateY(-4px);
 }
 
 @media (max-width: 1000px) {
@@ -165,4 +171,8 @@ button:disabled {
         height: 1.8rem;
         font-size: 0.8rem;
     }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
 }

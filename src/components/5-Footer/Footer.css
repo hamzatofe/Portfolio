@@ -2,6 +2,8 @@ footer.flex {
     justify-content: space-between;
     margin-bottom: 1rem;
     font-size: 0.8rem;
+    padding-bottom: 0.5rem;
+    opacity: 0.85;
 }
 
 footer.flex ul {
